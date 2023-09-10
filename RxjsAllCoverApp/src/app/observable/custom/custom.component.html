@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h5>Custom Observable</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <strong>Ex - 01(Manual)</strong>
+      <hr />
+      <ul
+        [ngClass]="
+          techStatus == 'completed'
+            ? 'completed'
+            : techStatus == 'error'
+            ? 'error'
+            : ''
+        "
+        class="list-group list-group-flush list"
+        id="elContainer"
+      >
+        <!-- <li class="list-item">Angular</li>
+        <li class="list-item">Typescript</li>
+        <li class="list-item">Html and Css</li> -->
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <strong>Ex - 02(Custom Interval Observable)</strong>
+      <hr />
+      <ul
+        [ngClass]="
+          techStatus2 == 'completed'
+            ? 'completed'
+            : techStatus2 == 'error'
+            ? 'error'
+            : ''
+        "
+        class="list-group list-group-flush list"
+        id="elContainer2"
+      >
+        <!-- <li class="list-item">Angular</li>
+        <li class="list-item">Typescript</li>
+        <li class="list-item">Html and Css</li> -->
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <strong>Ex - 03(Random Names)</strong>
+      <hr />
+      <p class="bg-light border rounded p-2">
+        <strong>Data: </strong> 'Dadabhau', 'Vedshree','Neha','Aryan',
+        'Abhishree'
+      </p>
+      <hr />
+      <p>
+        Current Name: <strong>{{ name }}</strong>
+      </p>
+      <span
+        [ngClass]="
+          namesStatus == 'completed'
+            ? 'text-bg-success'
+            : namesStatus == 'error'
+            ? 'text-bg-danger'
+            : 'text-bg-primary'
+        "
+        class="badge"
+        >{{
+          namesStatus == "completed"
+            ? "Success"
+            : namesStatus == "error"
+            ? "Error"
+            : "Running..."
+        }}</span
+      >
+    </div>
+  </div>
+</div>

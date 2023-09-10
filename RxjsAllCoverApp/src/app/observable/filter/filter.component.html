@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h5>Filter</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <strong>Ex - 01</strong>
+      <hr />
+      <p class="bg-light border rounded p-2">
+        <strong>Filter:</strong> By lenght
+      </p>
+      <table>
+        <tr>
+          <th>Name</th>
+        </tr>
+        <tr *ngFor="let user of userData">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-4">
+      <strong>Ex - 01</strong>
+      <hr />
+      <p class="bg-light border rounded p-2">
+        <strong>Filter:</strong> By Gender
+      </p>
+      <table>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Gender</th>
+        </tr>
+        <tr *ngFor="let user of userData2">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.gender }}</td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-4">
+      <strong>Ex - 01</strong>
+      <hr />
+      <p class="bg-light border rounded p-2"><strong>Filter:</strong> By nth</p>
+      <table>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Gender</th>
+        </tr>
+        <tr *ngFor="let user of userData3">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.gender }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
