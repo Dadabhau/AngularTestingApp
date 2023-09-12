@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './inculdes/header/header.component';
@@ -16,6 +16,13 @@ import { MapComponent } from './observable/map/map.component';
 import { PluckComponent } from './observable/pluck/pluck.component';
 import { FilterComponent } from './observable/filter/filter.component';
 import { TapComponent } from './observable/tap/tap.component';
+import { TakeComponent } from './observable/take/take.component';
+import { RetryComponent } from './observable/retry/retry.component';
+import { DebounceTimeComponent } from './observable/debounce-time/debounce-time.component';
+import { SubjectComponent } from './observable/subject/subject.component';
+import { Comp1Component } from './observable/subcomponent/comp1/comp1.component';
+import { Comp2Component } from './observable/subcomponent/comp2/comp2.component';
+import { Comp3Component } from './observable/subcomponent/comp3/comp3.component';
 
 @NgModule({
   declarations: [
@@ -32,13 +39,17 @@ import { TapComponent } from './observable/tap/tap.component';
     MapComponent,
     PluckComponent,
     FilterComponent,
-    TapComponent
+    TapComponent,
+    TakeComponent,
+    RetryComponent,
+    DebounceTimeComponent,
+    SubjectComponent,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

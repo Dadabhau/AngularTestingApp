@@ -12,6 +12,10 @@ import { MapComponent } from './observable/map/map.component';
 import { PluckComponent } from './observable/pluck/pluck.component';
 import { FilterComponent } from './observable/filter/filter.component';
 import { TapComponent } from './observable/tap/tap.component';
+import { TakeComponent } from './observable/take/take.component';
+import { RetryComponent } from './observable/retry/retry.component';
+import { DebounceTimeComponent } from './observable/debounce-time/debounce-time.component';
+import { SubjectComponent } from './observable/subject/subject.component';
 
 const routes: Routes = [
   { path: 'promise', component: PromisesComponent },
@@ -29,6 +33,10 @@ const routes: Routes = [
       { path: 'pluck', component: PluckComponent },
       { path: 'filter', component: FilterComponent },
       { path: 'tap', component: TapComponent },
+      { path: 'take', component: TakeComponent },
+      { path: 'retry', component: RetryComponent },
+      { path: 'debouncetime', component: DebounceTimeComponent },
+      { path: 'subject', component: SubjectComponent },
     ],
   },
   { path: '**', redirectTo: 'promise' },

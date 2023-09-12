@@ -1,0 +1,20 @@
+<form class="row g-3">
+  <div class="col-md-6">
+    <strong class="text-primary">Ex - 01 | DebounceTime</strong>
+    <hr />
+    <label class="form-label">Search...</label>
+    <input #myInput type="text" class="form-control" placeholder="Search..." />
+    <span *ngIf="reqData != null"
+      >Requsted Data: <strong class="text-success">{{ reqData }}</strong></span
+    >
+  </div>
+  <div class="col-md-6">
+    <strong class="text-warning">Ex - 02 | DistinctUntilChanged</strong>
+    <hr />
+    <label class="form-label">Search...</label>
+    <input #myInput2 type="text" class="form-control" placeholder="Search..." />
+    <span *ngIf="reqData2 != null"
+      >Requsted Data: <strong class="text-success">{{ reqData2 }}</strong></span
+    >
+  </div>
+</form>
