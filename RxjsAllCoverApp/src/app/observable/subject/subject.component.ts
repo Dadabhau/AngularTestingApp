@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subject } from 'rxjs';
 import { DesignUlilityService } from 'src/app/appservices/design-ulility.service';
 
 @Component({
@@ -12,6 +13,7 @@ export class SubjectComponent implements OnInit, OnDestroy {
 
   // For BehaviorSubject
   username: string;
+
   constructor(private uiservices: DesignUlilityService) {}
   ngOnInit(): void {
     this.uiservices.exclusive.next(true);

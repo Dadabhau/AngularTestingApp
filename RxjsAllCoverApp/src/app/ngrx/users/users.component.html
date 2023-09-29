@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 mt-4" *ngFor="let user of users">
+      <div class="card" style="width: 100%">
+        <div class="card-header">
+          <strong>User:</strong> {{ user.username }}
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <strong>User Name:</strong> {{ user.name.firstname }}
+            {{ user.name.lastname }}
+          </li>
+          <li class="list-group-item">
+            <strong>User Email:</strong> {{ user.email }}
+          </li>
+          <li class="list-group-item">
+            <strong>User Phone:</strong> {{ user.phone }}
+          </li>
+          <li class="list-group-item">
+            <strong>User City:</strong> {{ user.address.city }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

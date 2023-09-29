@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Subject } from 'rxjs';
+import { AsyncSubject, BehaviorSubject, ReplaySubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -12,6 +12,17 @@ export class DesignUlilityService {
 
   // For BehaviorSubject
   username = new BehaviorSubject<string>('Dadabhau');
+
+  // Replay Subject
+  // videoemit = new ReplaySubject<string>(3);
+
+  // Replay Subject with time
+  videoemit = new ReplaySubject<string>(3, 5000);
+
+  // Async Subject
+  asyncVideoEmit = new AsyncSubject();
+
+  // List Display method
   print(val: any, containerId: any) {
     let el = document.createElement('li');
     el.classList.add('list-group-item', 'list-item');

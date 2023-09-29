@@ -1,0 +1,83 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 mb-3"><h3>Share Replay</h3></div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Men's Products</h4>
+      <div class="row">
+        <div class="col-md-3" *ngFor="let item of mens | async">
+          <div class="card" style="width: 100%">
+            <img
+              src="{{ item.image }}"
+              class=""
+              alt="{{ item.title }}"
+              width="100"
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{ item.title }}</h5>
+              <h6>$ {{ item.price }}</h6>
+              <p class="card-text">
+                {{ item.description }}
+              </p>
+              <a href="#" class="btn btn-primary">Add Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <h4>Women's Products</h4>
+      <div class="row">
+        <div class="col-md-3" *ngFor="let item of womens | async">
+          <div class="card" style="width: 100%">
+            <img
+              src="{{ item.image }}"
+              class=""
+              alt="{{ item.title }}"
+              width="100"
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{ item.title }}</h5>
+              <h6>$ {{ item.price }}</h6>
+              <p class="card-text">
+                {{ item.description }}
+              </p>
+              <a href="#" class="btn btn-primary">Add Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <hr />
+      <h4>All Products</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3" *ngFor="let item of products | async">
+      <div class="card" style="width: 100%">
+        <img
+          src="{{ item.image }}"
+          class=""
+          alt="{{ item.title }}"
+          width="100"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ item.title }}</h5>
+          <h6>$ {{ item.price }}</h6>
+          <p class="card-text">
+            {{ item.category }}
+          </p>
+          <p class="card-text">
+            {{ item.description }}
+          </p>
+          <a href="#" class="btn btn-primary">Add Cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
